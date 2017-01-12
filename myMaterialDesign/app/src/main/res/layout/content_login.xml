@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.hxnidc.mymaterialdesign.LoginActivity"
+    >
+
+    <!--
+
+      android:textColorHint="#cccccc" hint文本字体的颜色
+      app:hintEnabled="false"  表示hint文本无
+
+      app:counterMaxLength="24" 表示输入的最大长度为24
+      app:counterEnabled="true" 是否激活输入长度
+      app:errorEnabled ="true" 是否激活错误显示，默认为true
+      app:hintAnimationEnabled ="false" 是否设置悬浮动画默认为true
+
+    -->
+
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/til_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="用户名"
+        android:textColorHint="#cccccc"
+        app:counterEnabled="true"
+        app:counterMaxLength="24"
+        app:counterOverflowTextAppearance="@style/TextInputOverflowText"
+
+        >
+
+        <EditText
+            android:id="@+id/et_login_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </android.support.design.widget.TextInputLayout>
+
+
+    <!--
+    app:passwordToggleEnabled="true"是否显示密码可见并且为true是有边显示一个eye图标点击显示密码
+    app:passwordToggleDrawable="@drawable/eye" 设置图标
+    app:passwordToggleTint="@color/colorPrimary"改变默认图标eye的颜色
+    app:passwordToggleContentDescription 内容详情
+    android:textCursorDrawable ="@null" //设置光标颜色
+    -->
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/til_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="密码"
+        android:paddingBottom="8dp"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/colorPrimary"
+        >
+
+        <EditText
+            android:id="@+id/et_login_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+
+            />
+    </android.support.design.widget.TextInputLayout>
+
+</LinearLayout>

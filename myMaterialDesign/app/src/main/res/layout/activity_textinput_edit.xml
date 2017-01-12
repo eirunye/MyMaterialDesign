@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/til_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:counterEnabled="true"
+        app:counterMaxLength="11"
+        android:hint="用户名"
+        >
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/tie_login_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/til_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="密码"
+        app:counterEnabled="true"
+        app:counterMaxLength="24"
+        app:passwordToggleEnabled="true"
+        app:hintAnimationEnabled="true"
+
+        >
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/tie_login_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            />
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:text="登录"
+        />
+
+</LinearLayout>
